@@ -229,6 +229,13 @@ body, html {
     display: none
 }
 
+@media screen and (min-width: 1200px) {
+    #header__mobile-menu-check:checked ~ .header .header__mobile-menu {
+        display: none !important;
+    }
+}
+
+
 #header__mobile-search-check, #header__mobile-menu-check {
     display: none;
 }
@@ -269,7 +276,7 @@ body, html {
     opacity: 0.4; 
 }
 
-#header__mobile-menu-check:checked ~ header .header__mobile-menu {
+#header__mobile-menu-check:checked ~ .header .header__mobile-menu {
     display: flex;
     align-items: center;
     border-top: 1px solid rgb(255, 255, 255, 0.5);
@@ -283,6 +290,27 @@ body, html {
     left: 0;
     z-index: 1;
 }
+
+
+@keyframes growIn {
+    from {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+
+.grow-in {
+    opacity: 0;
+    transform: scaleY(0);
+    animation: growIn 0.3s forwards;
+    transform-origin: top;
+}
+
 
 .header__mobile-link {
     color: white;
