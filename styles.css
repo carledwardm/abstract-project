@@ -214,7 +214,9 @@ body, html {
 
 .header__mobile-menu-btn, .header__mobile-search-btn {
     color: white;
+    cursor: pointer;
 }
+
 
 .header__mobile-search-btn {
     margin-right: 15px;
