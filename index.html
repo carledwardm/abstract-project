@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="./images/logo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -154,13 +155,17 @@
                 <g class="abstract-logo-mark">
                 <path d="M25.41 0C5.08 0 0 5.08 0 25.41s5.08 25.41 25.41 25.41 25.41-5.08 25.41-25.41S45.74 0 25.41 0zm-4.17 39.31A9.73 9.73 0 1 1 31 29.58a9.75 9.75 0 0 1-9.76 9.73zm17.67-.4h-4.77V16.67H11.91v-4.76h27z"></path>
                 <circle cx="21.24" cy="29.58" r="4.96"></circle></g></svg>
-                <p class="footer__copyright-text">© Copyright 2025</p>
+                <p class="footer__copyright-text" id="footer__copyright"></p>
                 <p class="footer__copyright-text">Abstract Studio Design, Inc.</p>
                 <p class="footer__copyright-text">All rights reserved</p>
             </div>
         </div>
     </footer>
-
+    <script>
+        const date = new Date().getFullYear();
+        console.log(date);
+        document.getElementById("footer__copyright").innerHTML = "© Copyright " + date;
+    </script>
 </body>
 </html>
 
